@@ -1,13 +1,16 @@
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-
 import Alerta from '../components/Alerta'
 import clienteAxios from '../config/clienteAxios'
+import useAuth from '../hooks/useAuth'
 
 const Login = () => {
 	const [email, setEmail] = useState('')
 	const [password, setPassword] = useState('')
 	const [alerta, setAlerta] = useState({})
+
+	const { setAuth } = useAuth()
+	const navigate = useNavigate()
 
 	const handleSubmit = async (e) => {
 		e.preventDefault()
@@ -21,13 +24,19 @@ const Login = () => {
 		}
 
 		try {
-			const {data} = await clienteAxios.post('/usuarios/login', {email, password})
-			console.log(data);
+			const { data } = await clienteAxios.post('/usuarios/login', {
+				email,
+				password,
+			})
+			setAlerta({})
+			localStorage.setItem('token', data.token)
+			setAuth(data)
+			navigate('/inicio')
 		} catch (error) {
 			setAlerta({
 				msg: error.response.data.msg,
-				error: true
-			});
+				error: true,
+			})
 		}
 	}
 
@@ -62,8 +71,6 @@ const Login = () => {
 					<label
 						className='uppercase text-gray-600 block text-xl font-bold'
 						htmlFor='password'
-						value={password}
-						onChange={(e) => setPassword(e.target.value)}
 					>
 						password
 					</label>
@@ -72,6 +79,8 @@ const Login = () => {
 						type='password'
 						placeholder='Password de registro'
 						className='w-full mt-3 p-3 border rounded-xl bg-gray-50'
+						value={password}
+						onChange={(e) => setPassword(e.target.value)}
 					/>
 				</div>
 
