@@ -18,17 +18,17 @@ const Nav = () => {
 	return (
 		<>
 			<div className='shadow-md w-full fixed top-0 left-0'>
-				<div className='md:flex items-center justify-between bg-white py-4 md:px-10 px-7'>
+				<div className='md:flex items-center justify-between bg-white py-5 md:px-10 px-4 border-b-2 md:border-none'>
 					<div className='font-bold text-2xl cursor-pointer flex items-center text-gray-800'>
 						<span className='text-3xl text-indigo-600 mr-1 pt-2'>
 							<ion-icon name='logo-javascript'></ion-icon>
 						</span>
-						Designer
+						Dashboard
 					</div>
 
 					<div
 						onClick={() => setOpen(!open)}
-						className='text-3xl absolute right-8 top-6 cursor-pointer md:hidden'
+						className='text-3xl absolute right-4 top-6 cursor-pointer md:hidden'
 					>
 						<ion-icon name={open ? 'close' : 'menu'}></ion-icon>
 					</div>
@@ -39,18 +39,25 @@ const Nav = () => {
 						}`}
 					>
 						{Links.map((link) => (
-							<li key={link.name} className='md:ml-8 md:my-0 '>
+							<li key={link.name} className='md:ml-8 md:my-0 py-1'>
 								<a
 									href={link.link}
-									className='"text-gray-800 text-sm md:text-xl font-semibold hover:text-purple-600 mb-1'
+									className='"text-gray-800 text-sm md:text-sm font-semibold hover:text-purple-600 mb-1'
 								>
 									{link.name}
 								</a>
 							</li>
 						))}
-						<div className='flex justify-between border-t-2 py-2 md:border-none'>
-							<Button>Hola: {auth.nombre}</Button>
-							<Button onClick={handleCerrarSesion}>Cerrar sesión</Button>
+						<div className='flex justify-between border-t-2 py-2 md:border-none text-sm font-bold'>
+							<p className='text-black py-2 md:ml-8  uppercase'>
+								Hola: {auth.nombre}
+							</p>
+							<button
+								className='bg-red-600 text-white py-2 px-6 rounded md:ml-8 hover:bg-red-500 duration-500 uppercase'
+								onClick={handleCerrarSesion}
+							>
+								Cerrar sesión
+							</button>
 						</div>
 					</ul>
 				</div>
