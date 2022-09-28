@@ -13,6 +13,7 @@ import EmailsMasivos from './pages/EmailsMasivos'
 
 import { AuthProvider } from './context/AuthProvider'
 import Nav from './components/Nav'
+import Cliente from './components/Cliente'
 
 function App() {
 	return (
@@ -27,6 +28,7 @@ function App() {
 						<Route path='confirmar/:id' element={<ConfirmarCuenta />} />
 						<Route path='emails' element={<EmailsMasivos />} />
 						<Route path='nav' element={<Nav />} />
+						<Route path='cliente' element={<Cliente />} />
 					</Route>
 
 					<Route path='/inicio' element={<RutaProtegida />}>
