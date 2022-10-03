@@ -77,7 +77,6 @@ const confirmar = async (req, res) => {
 
 const olvidePassword = async (req, res) => {
 	const { email } = req.body
-	//Comprobar si el usuario existe
 	const usuario = await Usuario.findOne({ email })
 	if (!usuario) {
 		const error = new Error('El usuario no existe')
@@ -88,14 +87,14 @@ const olvidePassword = async (req, res) => {
 		usuario.token = generarId()
 		await usuario.save()
 
-		//Enviar email
+		// Enviar el email
 		emailOlvidePassword({
 			email: usuario.email,
 			nombre: usuario.nombre,
 			token: usuario.token,
 		})
 
-		res.json({ msg: 'Hemos enviado un email con la instrucciones' })
+		res.json({ msg: 'Hemos enviado un email con las instrucciones' })
 	} catch (error) {
 		console.log(error)
 	}

@@ -10,8 +10,8 @@ const RutaProtegida = () => {
 			{auth._id ? (
 				<div className='bg-gray-100'>
 					<Header />
-					<div className='md: flex md:min-h-screen'>
-						<main className='p-10 flex-1 bg-red-600'>
+					<div className=''>
+						<main className='py-10 flex-1'>
 							<Outlet />
 						</main>
 					</div>

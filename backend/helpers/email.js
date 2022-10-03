@@ -35,7 +35,7 @@ export const emailOlvidePassword = async (datos) => {
 
 	//Transport Mailtrap
 	const transport = nodemailer.createTransport({
-		host: process.env.EMAIIL_HOST,
+		host: process.env.EMAIL_HOST,
 		port: process.env.EMAIL_PORT,
 		auth: {
 			user: process.env.EMAIL_USER,
@@ -52,7 +52,7 @@ export const emailOlvidePassword = async (datos) => {
 		text: 'Restablece tu contraseña',
 		html: `<p>Hola: ${nombre} has solicitado reestablecer tu contraseña</p>
              <p>Sigue el siguiente enlace para generar una nueva contraseña:</p>
-             <a href="${process.env.FRONTEND_URL}/olvide-password/${token}">Comprobar cuenta</a>
+             <a href="${process.env.FRONTEND_URL}/olvide-password/${token}">Cambiar contraseña</a>
              
              <p>Si tu no solicitaste reestablecer tu contraseña, puedes ignorar el mensaje</p>
                 

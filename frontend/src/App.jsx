@@ -9,11 +9,15 @@ import OlvidePassword from './pages/OlvidePassword'
 import NuevoPassword from './pages/NuevoPassword'
 import ConfirmarCuenta from './pages/ConfirmarCuenta'
 import Inicio from './pages/Inicio'
-import EmailsMasivos from './pages/EmailsMasivos'
 
 import { AuthProvider } from './context/AuthProvider'
-import Nav from './components/Nav'
+
+{
+	/* Imports de pruebas */
+}
 import Cliente from './components/Cliente'
+import EmailsMasivos from './pages/EmailsMasivos'
+import EnviarCorreos from './pages/EnviarCorreos'
 
 function App() {
 	return (
@@ -26,8 +30,9 @@ function App() {
 						<Route path='olvide-password' element={<OlvidePassword />} />
 						<Route path='olvide-password/:token' element={<NuevoPassword />} />
 						<Route path='confirmar/:id' element={<ConfirmarCuenta />} />
-						<Route path='emails' element={<EmailsMasivos />} />
-						<Route path='nav' element={<Nav />} />
+
+						<Route path='emails' element={<EnviarCorreos />} />
+						<Route path='emailm' element={<EmailsMasivos />} />
 						<Route path='cliente' element={<Cliente />} />
 					</Route>
 
