@@ -44,15 +44,15 @@ const Login = () => {
 
 	return (
 		<>
-			<h1 className='text-sky-600 font-black text-5xl'>Inicia sesión</h1>
 			{msg && <Alerta alerta={alerta} />}
 			<form
 				className='my-10 bg-white shadow rounded-lg p-10'
 				onSubmit={handleSubmit}
 			>
+				<h1 className='text-indigo-600 font-black text-3xl'>Inicia sesión</h1>
 				<div className='my-5'>
 					<label
-						className='uppercase text-gray-600 block text-xl font-bold'
+						className='text-gray-600 block text-lg font-bold'
 						htmlFor='email'
 					>
 						Email
@@ -69,10 +69,10 @@ const Login = () => {
 
 				<div className='my-5'>
 					<label
-						className='uppercase text-gray-600 block text-xl font-bold'
+						className='text-gray-600 block text-lg font-bold'
 						htmlFor='password'
 					>
-						password
+						Password
 					</label>
 					<input
 						id='password'
@@ -87,7 +87,7 @@ const Login = () => {
 				<input
 					type='submit'
 					value='Iniciar sesión'
-					className='bg-sky-700 mb-5 w-full py-3 text-white uppercase font-bold rounded hover:cursor-pointer hover:bg-sky-800 transition-colors'
+					className='w-full flex justify-center bg-gradient-to-r from-indigo-500 to-blue-600  hover:bg-gradient-to-l hover:from-blue-500 hover:to-indigo-600 text-gray-100 p-4  rounded-xl tracking-wide font-semibold  shadow-lg cursor-pointer transition ease-in duration-500'
 				/>
 			</form>
 
