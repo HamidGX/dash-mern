@@ -37,12 +37,14 @@ const ConfirmarCuenta = () => {
 
 	return (
 		<>
-			<h1 className='text-sky-600 font-black text-5xl'>Confirma tu cuenta</h1>
+			<h1 className='text-indigo-600 font-black text-3xl'>
+				Confirma tu contraseña
+			</h1>
 			<div className='mt-20 md:mt-5 px-5 py-10'>
 				{msg && <Alerta alerta={alerta} />}
 				{cuentaConfirmada && (
 					<Link
-						className='block text-center my-5 text-slate-500 uppercase text-sm'
+						className='block text-center my-5 text-slate-500 text-base'
 						to='/'
 					>
 						¿Ya tienes una cuenta? Inicia sesión

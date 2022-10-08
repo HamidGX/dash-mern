@@ -57,8 +57,8 @@ const NuevoPassword = () => {
 
 	return (
 		<>
-			<h1 className='text-sky-600 font-black text-5xl'>
-				Reestablece tu contraseña
+			<h1 className='text-indigo-600 font-black text-3xl'>
+				Restablecer tu contraseña
 			</h1>
 
 			{msg && <Alerta alerta={alerta} />}
@@ -88,7 +88,7 @@ const NuevoPassword = () => {
 					<input
 						type='submit'
 						value='Guardar nueva contraseña'
-						className='bg-sky-700 mb-5 w-full py-3 text-white uppercase font-bold rounded hover:cursor-pointer hover:bg-sky-800 transition-colors'
+						className='w-full flex justify-center bg-gradient-to-r from-indigo-500 to-blue-600  hover:bg-gradient-to-l hover:from-blue-500 hover:to-indigo-600 text-gray-100 py-3 rounded-xl tracking-wide font-bold uppercase  shadow-lg cursor-pointer transition ease-in duration-500'
 					/>
 				</form>
 			)}

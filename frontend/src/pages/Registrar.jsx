@@ -64,15 +64,12 @@ const Registrar = () => {
 	const { msg } = alerta
 	return (
 		<>
-			<h1 className='text-sky-600 font-black text-5xl'>Crea una cuenta</h1>
-
-			<form
-				className='my-10 bg-white shadow rounded-lg p-10'
-				onSubmit={handleSubmit}
-			>
+			{msg && <Alerta alerta={alerta} />}
+			<form className='bg-white shadow rounded-lg p-10' onSubmit={handleSubmit}>
+				<h1 className='text-indigo-600 font-black text-3xl'>Crea una cuenta</h1>
 				<div className='my-5'>
 					<label
-						className='uppercase text-gray-600 block text-xl font-bold'
+						className='text-gray-600 block text-lg font-bold'
 						htmlFor='nombre'
 					>
 						Nombre
@@ -89,7 +86,7 @@ const Registrar = () => {
 
 				<div className='my-5'>
 					<label
-						className='uppercase text-gray-600 block text-xl font-bold'
+						className='text-gray-600 block text-lg font-bold'
 						htmlFor='email'
 					>
 						Email
@@ -106,10 +103,10 @@ const Registrar = () => {
 
 				<div className='my-5'>
 					<label
-						className='uppercase text-gray-600 block text-xl font-bold'
+						className='text-gray-600 block text-lg font-bold'
 						htmlFor='password'
 					>
-						password
+						Password
 					</label>
 					<input
 						id='password'
@@ -123,7 +120,7 @@ const Registrar = () => {
 
 				<div className='my-5'>
 					<label
-						className='uppercase text-gray-600 block text-xl font-bold'
+						className='text-gray-600 block text-lg font-bold'
 						htmlFor='password'
 					>
 						Repetir password
@@ -141,27 +138,25 @@ const Registrar = () => {
 				<input
 					type='submit'
 					value='Crear cuenta'
-					className='bg-sky-700 mb-5 w-full py-3 text-white uppercase font-bold rounded hover:cursor-pointer hover:bg-sky-800 transition-colors'
+					className='w-full flex justify-center bg-gradient-to-r from-indigo-500 to-blue-600  hover:bg-gradient-to-l hover:from-blue-500 hover:to-indigo-600 text-gray-100 py-3 rounded-xl tracking-wide font-bold uppercase  shadow-lg cursor-pointer transition ease-in duration-500'
 				/>
+
+				<nav className='lg:flex lg:justify-between'>
+					<Link
+						className='block text-center my-5 text-slate-500 text-base'
+						to='/'
+					>
+						¿Ya tienes una cuenta? Inicia sesión
+					</Link>
+
+					<Link
+						className='block text-center my-5 text-slate-500 text-base'
+						to='/olvide-password'
+					>
+						Olvide mi contraseña
+					</Link>
+				</nav>
 			</form>
-
-			{msg && <Alerta alerta={alerta} />}
-
-			<nav className='lg:flex lg:justify-between'>
-				<Link
-					className='block text-center my-5 text-slate-500 uppercase text-sm'
-					to='/'
-				>
-					¿Ya tienes una cuenta? Inicia sesión
-				</Link>
-
-				<Link
-					className='block text-center my-5 text-slate-500 uppercase text-sm'
-					to='/olvide-password'
-				>
-					Olvide mi contraseña
-				</Link>
-			</nav>
 		</>
 	)
 }

@@ -1,11 +1,10 @@
-import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import clienteAxios from '../config/clienteAxios'
 import Alerta from '../components/Alerta'
 
-const OlvidePassword = () => {
-	const [email, setEmail] = useState('')
+const EnvioCorreosDos = () => {
 	const [alerta, setAlerta] = useState({})
+	const [email, setEmail] = useState('')
 
 	const handleSubmit = async (e) => {
 		e.preventDefault()
@@ -19,7 +18,7 @@ const OlvidePassword = () => {
 		}
 
 		try {
-			const { data } = await clienteAxios.post(`/usuarios/olvide-password`, {
+			const { data } = await clienteAxios.post(`/clientes/envio-correos`, {
 				email,
 			})
 
@@ -44,7 +43,7 @@ const OlvidePassword = () => {
 				onSubmit={handleSubmit}
 			>
 				<h1 className='text-indigo-600 font-black text-3xl'>
-					Recupera tu contraseña
+					Envio de Correos
 				</h1>
 				<div className='my-5'>
 					<label
@@ -68,25 +67,9 @@ const OlvidePassword = () => {
 					value='Enviar instrucciones'
 					className='w-full flex justify-center bg-gradient-to-r from-indigo-500 to-blue-600  hover:bg-gradient-to-l hover:from-blue-500 hover:to-indigo-600 text-gray-100 py-3 rounded-xl tracking-wide font-bold uppercase  shadow-lg cursor-pointer transition ease-in duration-500'
 				/>
-
-				<nav className='lg:flex lg:justify-between'>
-					<Link
-						className='block text-center my-5 text-slate-500 text-base'
-						to='/'
-					>
-						¿Ya tienes una cuenta? Inicia sesión
-					</Link>
-
-					<Link
-						className='block text-center my-5 text-slate-500 text-base'
-						to='/registrar'
-					>
-						¿No tienes una cuenta? Regístrate
-					</Link>
-				</nav>
 			</form>
 		</>
 	)
 }
 
-export default OlvidePassword
+export default EnvioCorreosDos

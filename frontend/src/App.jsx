@@ -17,7 +17,8 @@ import { AuthProvider } from './context/AuthProvider'
 }
 import Cliente from './components/Cliente'
 import EmailsMasivos from './pages/EmailsMasivos'
-import EnviarCorreos from './pages/EnviarCorreos'
+import EnvioCorreos from './pages/EnvioCorreos'
+import EnvioCorreosDos from './pages/EnvioCorreosDos'
 
 function App() {
 	return (
@@ -31,9 +32,9 @@ function App() {
 						<Route path='olvide-password/:token' element={<NuevoPassword />} />
 						<Route path='confirmar/:id' element={<ConfirmarCuenta />} />
 
-						<Route path='emails' element={<EnviarCorreos />} />
 						<Route path='emailm' element={<EmailsMasivos />} />
 						<Route path='cliente' element={<Cliente />} />
+						<Route path='envio-correos' element={<EnvioCorreos />} />
 					</Route>
 
 					<Route path='/inicio' element={<RutaProtegida />}>

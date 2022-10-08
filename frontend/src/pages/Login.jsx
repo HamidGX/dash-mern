@@ -50,6 +50,7 @@ const Login = () => {
 				onSubmit={handleSubmit}
 			>
 				<h1 className='text-indigo-600 font-black text-3xl'>Inicia sesión</h1>
+
 				<div className='my-5'>
 					<label
 						className='text-gray-600 block text-lg font-bold'
@@ -87,25 +88,25 @@ const Login = () => {
 				<input
 					type='submit'
 					value='Iniciar sesión'
-					className='w-full flex justify-center bg-gradient-to-r from-indigo-500 to-blue-600  hover:bg-gradient-to-l hover:from-blue-500 hover:to-indigo-600 text-gray-100 p-4  rounded-xl tracking-wide font-semibold  shadow-lg cursor-pointer transition ease-in duration-500'
+					className='w-full flex justify-center bg-gradient-to-r from-indigo-500 to-blue-600  hover:bg-gradient-to-l hover:from-blue-500 hover:to-indigo-600 text-gray-100 py-3 rounded-xl tracking-wide font-bold uppercase  shadow-lg cursor-pointer transition ease-in duration-500'
 				/>
+
+				<nav className='lg:flex lg:justify-between'>
+					<Link
+						className='block text-center my-5 text-slate-500 text-base'
+						to='/registrar'
+					>
+						¿No tienes una cuenta? Regístrate
+					</Link>
+
+					<Link
+						className='block text-center my-5 text-slate-500 text-base'
+						to='/olvide-password'
+					>
+						Olvide mi contraseña
+					</Link>
+				</nav>
 			</form>
-
-			<nav className='lg:flex lg:justify-between'>
-				<Link
-					className='block text-center my-5 text-slate-500 uppercase text-sm'
-					to='/registrar'
-				>
-					¿No tienes una cuenta? Regístrate
-				</Link>
-
-				<Link
-					className='block text-center my-5 text-slate-500 uppercase text-sm'
-					to='/olvide-password'
-				>
-					Olvide mi contraseña
-				</Link>
-			</nav>
 		</>
 	)
 }
