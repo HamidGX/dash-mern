@@ -13,7 +13,7 @@ const envioCorreos = async (req, res) => {
 	const { email } = req.body
 	const cliente = await Cliente.findOne({ email })
 	if (!cliente) {
-		const error = new Error('El cliente no existe')
+		const error = new Error('El cliente no existe1')
 		return res.status(404).json({ msg: error.message })
 	}
 
@@ -35,7 +35,7 @@ const envioCorreosDos = async (req, res) => {
 	const { email } = req.body
 	const cliente = await Cliente.find({ email }).select('-__v')
 	if (!cliente) {
-		const error = new Error('El cliente no existe')
+		const error = new Error('El cliente no existe2')
 		return res.status(404).json({ msg: error.message })
 	}
 

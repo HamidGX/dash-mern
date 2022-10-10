@@ -44,7 +44,6 @@ export const emailOlvidePassword = async (datos) => {
 	})
 
 	//Informacion del email
-
 	const info = await transport.sendMail({
 		from: 'Dashboard <cuentas@bungie.net>',
 		to: email,
