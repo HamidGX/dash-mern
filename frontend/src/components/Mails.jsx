@@ -2,7 +2,7 @@ import { useState } from 'react'
 import clienteAxios from '../config/clienteAxios'
 import Alerta from '../components/Alerta'
 
-const EnvioCorreosDos = () => {
+const Mail = () => {
 	const [alerta, setAlerta] = useState({})
 	const [email, setEmail] = useState('')
 
@@ -43,7 +43,7 @@ const EnvioCorreosDos = () => {
 				onSubmit={handleSubmit}
 			>
 				<h1 className='text-indigo-600 font-black text-3xl'>
-					Envio de Correos1
+					Envio de Correos
 				</h1>
 				<div className='my-5'>
 					<label
@@ -72,4 +72,4 @@ const EnvioCorreosDos = () => {
 	)
 }
 
-export default EnvioCorreosDos
+export default Mail

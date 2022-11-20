@@ -21,7 +21,7 @@ const Cards = () => {
 							</svg>
 						</div>
 						<div className='ml-4'>
-							<h2 className='font-semibold'>Clientes</h2>
+							<h2 className='font-semibold'>Clientes: 1000</h2>
 							<p className='mt-2 text-sm text-gray-500'>
 								Last opened 4 days ago
 							</p>
@@ -45,7 +45,7 @@ const Cards = () => {
 							</svg>
 						</div>
 						<div className='ml-4'>
-							<h2 className='font-semibold'>1823 Correos enviados</h2>
+							<h2 className='font-semibold'>Correos enviados: 218</h2>
 							<p className='mt-2 text-sm text-gray-500'>
 								Last checked 3 days ago
 							</p>
@@ -69,7 +69,7 @@ const Cards = () => {
 							</svg>
 						</div>
 						<div className='ml-4'>
-							<h2 className='font-semibold'>Comentarios Positivos</h2>
+							<h2 className='font-semibold'>Comentarios positivos: 231</h2>
 							<p className='mt-2 text-sm text-gray-500'>
 								Last authored 1 day ago
 							</p>
@@ -93,7 +93,7 @@ const Cards = () => {
 							</svg>
 						</div>
 						<div className='ml-4'>
-							<h2 className='font-semibold'>Comentarios Negativos</h2>
+							<h2 className='font-semibold'>Comentarios negativos: 10</h2>
 							<p className='mt-2 text-sm text-gray-500'>
 								Last commented 8 days ago
 							</p>

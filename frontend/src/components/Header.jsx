@@ -10,8 +10,8 @@ const Header = () => {
 	}
 
 	let Links = [
-		{ name: 'HOME', link: '/' },
-		{ name: 'SERVICE', link: '/' },
+		// { name: 'HOME', link: '/' },
+		// { name: 'SERVICE', link: '/' },
 	]
 	let [open, setOpen] = useState(false)
 	return (

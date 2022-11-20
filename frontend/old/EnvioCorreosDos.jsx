@@ -32,7 +32,7 @@ const EnvioCorreosDos = () => {
 				onSubmit={handleSubmit}
 			>
 				<h1 className='text-indigo-600 font-black text-3xl'>
-					Envio de Correos
+					Envio de Correos2
 				</h1>
 				<div className='my-5'>
 					<label
@@ -51,7 +51,7 @@ const EnvioCorreosDos = () => {
 
 				<input
 					type='submit'
-					value='Enviar instrucciones'
+					value='Enviar promociones'
 					className='w-full flex justify-center bg-gradient-to-r from-indigo-500 to-blue-600  hover:bg-gradient-to-l hover:from-blue-500 hover:to-indigo-600 text-gray-100 py-3 rounded-xl tracking-wide font-bold uppercase  shadow-lg cursor-pointer transition ease-in duration-500'
 				/>
 			</form>
