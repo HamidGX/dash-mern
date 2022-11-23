@@ -6,7 +6,7 @@ import { TableReseña } from '../components/TableReseña'
 const Inicio = () => {
 	return (
 		<>
-			<div className='pt-10 md:pt-20 p-10 md:p-14'>
+			<div className='pt-16 md:pt-24 p-10 md:p-14'>
 				<div className='pb-5'>
 					<Cards />
 				</div>

@@ -1,3 +1,20 @@
+/* Tailwind CSS */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Custom properties */
+:root {
+    --indigo: #232037;
+    --yellow: #FBBC15;
+  }
+
+.indigo__unid {
+    color: var(--indigo);
+}
+
+.yellow__unid {
+    color: var(--yellow);
+}
+
+  

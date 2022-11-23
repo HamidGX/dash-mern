@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import useAuth from '../hooks/useAuth'
+import logoImg from '../assets/logo.png'
 
 const Header = () => {
 	const { auth } = useAuth()
@@ -16,18 +17,15 @@ const Header = () => {
 	let [open, setOpen] = useState(false)
 	return (
 		<>
-			<div className='shadow-md w-full fixed  z-[6666] top-0 left-0 '>
+			<div className='shadow-md w-full fixed z-[6666] top-0 left-0 '>
 				<div className='md:flex items-center justify-between bg-white py-5 md:px-10 px-4 border-b-2 md:border-none'>
 					<div className='font-bold text-2xl cursor-pointer flex items-center text-gray-800'>
-						<span className='text-3xl text-indigo-600 mr-1 pt-2'>
-							<ion-icon name='logo-react'></ion-icon>
-						</span>
-						Dashboard
+						<img src={logoImg} className='w-20 md:w-28 rounded-lg' alt='logo' />{' '}
 					</div>
 
 					<div
 						onClick={() => setOpen(!open)}
-						className='text-3xl absolute right-4 top-6 cursor-pointer md:hidden'
+						className='text-3xl absolute right-4 top-10 cursor-pointer md:hidden'
 					>
 						<ion-icon name={open ? 'close' : 'menu'}></ion-icon>
 					</div>
