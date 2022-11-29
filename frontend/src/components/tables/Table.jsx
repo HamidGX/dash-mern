@@ -1,8 +1,8 @@
 import MUIDataTable from 'mui-datatables'
 import { useState, useEffect } from 'react'
-import clienteAxios from '../config/clienteAxios'
+import clienteAxios from '../../config/clienteAxios'
 
-export const TableReseña = () => {
+export const Table = () => {
 	//1 - configuramos Los hooks
 	const [clientes, setClientes] = useState([])
 
@@ -27,46 +27,26 @@ export const TableReseña = () => {
 	//3 - Definimos las columns
 	const columns = [
 		{
+			name: '_id',
+			label: 'ID',
+		},
+		{
 			name: 'first_name',
-			label: 'NOMBRE',
+			label: 'Nombre',
 		},
 		{
-			name: 'precio',
-			label: 'PRECIO',
+			name: 'email',
+			label: 'EMAIL',
 		},
 		{
-			name: 'personal',
-			label: 'PERSONAL',
-		},
-		{
-			name: 'limpieza',
-			label: 'LIMPIEZA',
-		},
-		{
-			name: 'recepcion',
-			label: 'RECEPCION',
-		},
-		{
-			name: 'general',
-			label: 'GENERAL',
-		},
-		{
-			name: 'medio',
-			label: 'MEDIO',
-		},
-		{
-			name: 'recomendacion',
-			label: 'RECOMENDACION',
-		},
-		{
-			name: 'mes ',
-			label: 'MES',
+			name: 'celular',
+			label: 'TELEFONO',
 		},
 	]
 	//4 - renderizamos la datatable
 	return (
 		<MUIDataTable
-			title={'Opinion de los clientes'}
+			title={'Lista de clientes'}
 			data={clientes}
 			columns={columns}
 			options={options}

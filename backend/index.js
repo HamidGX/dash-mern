@@ -3,6 +3,7 @@ import conectarDB from './config/db.js'
 import dotenv from 'dotenv'
 import usuarioRoutes from './routes/usuarioRoutes.js'
 import clienteRoutes from './routes/clienteRoutes.js'
+import opinionRoutes from './routes/opinionRoutes.js'
 import cors from 'cors'
 
 const app = express()
@@ -35,6 +36,7 @@ app.use(cors())
 //Routing
 app.use('/api/usuarios', usuarioRoutes)
 app.use('/api/clientes', clienteRoutes)
+app.use('/api/opiniones', opinionRoutes)
 
 const PORT = process.env.PORT || 4000
 

@@ -11,4 +11,5 @@ import {
 router.get('/correos', consultarCorreo)
 router.post('/envio-correos', envioCorreos)
 router.get('/pruebas', bulkCorreo)
+
 export default router
