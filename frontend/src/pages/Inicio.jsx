@@ -2,8 +2,7 @@ import Cards from '../components/Cards'
 import { Table } from '../components/tables/Table'
 import { TableReseña } from '../components/tables/TableReseña'
 import Mail from '../components/Mails'
-import Grafix from '../components/graphics/Grafix'
-
+import Graficas from '../components/Graficas'
 const Inicio = () => {
 	return (
 		<>
@@ -19,15 +18,12 @@ const Inicio = () => {
 						<TableReseña />
 					</div>
 				</div>
-
 				<div>
 					<Mail />
 				</div>
-
-				<div className='w-full md:grid md:grid-cols-3 grid-rows-3 gap-2'>
-					<div>
-						<Grafix />
-					</div>
+				¿
+				<div>
+					<Graficas />
 				</div>
 			</div>
 		</>
