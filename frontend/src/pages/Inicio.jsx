@@ -21,7 +21,7 @@ const Inicio = () => {
 				<div>
 					<Mail />
 				</div>
-				¿
+
 				<div>
 					<Graficas />
 				</div>

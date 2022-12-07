@@ -123,7 +123,7 @@ const nuevoPassword = async (req, res) => {
 		usuario.token = ''
 		try {
 			await usuario.save()
-			res.json({ msg: 'Password modificado correctamente' })
+			res.json({ msg: 'La contraseña se modificado correctamente' })
 		} catch (error) {
 			console.log(error)
 		}

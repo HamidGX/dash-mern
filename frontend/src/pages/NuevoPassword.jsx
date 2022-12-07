@@ -8,6 +8,7 @@ const NuevoPassword = () => {
 	const [tokenValido, setTokenValido] = useState(false)
 	const [alerta, setAlerta] = useState({})
 	const [passwordModificado, setPasswordModificado] = useState(false)
+
 	const params = useParams()
 	const { token } = params
 
@@ -31,15 +32,16 @@ const NuevoPassword = () => {
 
 		if (password.length < 6) {
 			setAlerta({
-				msg: 'La contraseña debe ser de minimo 6 caracteres',
+				msg: 'La contraseña es muy corta, agrega minimo 6 caracteres',
 				error: true,
 			})
 			return
 		}
 
 		try {
-			const url = `http://localhost:4000/api/usuarios/olvide-password/${token}`
-			const { data } = await axios.post(url, { password })
+			const url = `/usuarios/olvide-password/${token}`
+
+			const { data } = await clienteAxios.post(url, { password })
 			setAlerta({
 				msg: data.msg,
 				error: false,
@@ -57,7 +59,7 @@ const NuevoPassword = () => {
 
 	return (
 		<>
-			<h1 className='text-indigo-600 font-black text-3xl'>
+			<h1 className='text-indigo-600 font-black text-3xl text-center'>
 				Restablecer tu contraseña
 			</h1>
 
@@ -70,7 +72,7 @@ const NuevoPassword = () => {
 				>
 					<div className='my-5'>
 						<label
-							className='uppercase text-gray-600 block text-xl font-bold'
+							className='text-gray-600 block text-lg font-bold'
 							htmlFor='password'
 						>
 							Nueva contraseña

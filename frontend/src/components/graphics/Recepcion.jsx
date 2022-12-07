@@ -41,7 +41,7 @@ const obtenerCorreo = () => {
 	return opinion
 }
 
-const Grafix = () => {
+const Recepcion = () => {
 	const opiniones = obtenerCorreo()
 
 	var options = {
@@ -90,7 +90,14 @@ const Grafix = () => {
 			},
 		],
 	}
-	return <Pie data={data} options={options} />
+	return (
+		<>
+			<h1 className='text-indigo-600 font-black text-3xl text-center pb-5'>
+				Encuestas de Recepcion
+			</h1>
+			<Pie data={data} options={options} />
+		</>
+	)
 }
 
-export default Grafix
+export default Recepcion

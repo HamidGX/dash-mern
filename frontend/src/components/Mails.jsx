@@ -42,13 +42,13 @@ const Mail = () => {
 			<div className='my-10 bg-white shadow rounded-lg p-10 md:grid gap-5 md:grid-cols-2 md:gap-10 lg:gap-20'>
 				<div className='flex justify-center'>
 					<img
-						className='w-full md:max-w-xs'
+						className='w-2/3 md:w-3/4 lg:w-2/4'
 						src={emailImg}
 						alt='Email image'
 					/>
 				</div>
-				<form className='my-10 p-10' onSubmit={handleSubmit}>
-					<h1 className='text-indigo-600 font-black text-3xl'>
+				<form className='my-4 p-4 md:my-8 md:p-8' onSubmit={handleSubmit}>
+					<h1 className='text-indigo-600 font-black text-3xl text-center'>
 						Envio de Correos
 					</h1>
 					<div className='my-5'>
@@ -71,7 +71,7 @@ const Mail = () => {
 					<input
 						type='submit'
 						value='Enviar instrucciones'
-						className='w-full flex justify-center bg-gradient-to-r from-indigo-500 to-blue-600  hover:bg-gradient-to-l hover:from-blue-500 hover:to-indigo-600 text-gray-100 py-3 rounded-xl tracking-wide font-bold uppercase  shadow-lg cursor-pointer transition ease-in duration-500'
+						className='w-full flex justify-center bg-gradient-to-r from-indigo-500 to-blue-600  hover:bg-gradient-to-l hover:from-blue-500 hover:to-indigo-600 text-gray-100 py-3 rounded-xl tracking-wide font-bold uppercase  shadow-lg cursor-pointer transition ease-in duration-500 text-xs sm:text-sm'
 					/>
 				</form>
 			</div>

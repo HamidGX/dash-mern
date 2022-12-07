@@ -1,7 +1,6 @@
-import { Link } from 'react-router-dom'
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import Alerta from '../components/Alerta'
-import axios from 'axios'
 import clienteAxios from '../config/clienteAxios'
 
 const Registrar = () => {
@@ -24,9 +23,10 @@ const Registrar = () => {
 
 		if (password !== repetirPassword) {
 			setAlerta({
-				msg: 'las contraseñas no son iguales',
+				msg: 'Las contraseñas no son iguales',
 				error: true,
 			})
+			return
 		}
 
 		if (password.length < 6) {
@@ -34,10 +34,12 @@ const Registrar = () => {
 				msg: 'La contraseña es muy corta, agrega minimo 6 caracteres',
 				error: true,
 			})
+			return
 		}
 
 		setAlerta({})
-		//Crear el usuario en la API
+
+		// Crear el usuario en la API
 		try {
 			const { data } = await clienteAxios.post(`/usuarios`, {
 				nombre,
@@ -49,6 +51,7 @@ const Registrar = () => {
 				msg: data.msg,
 				error: false,
 			})
+
 			setNombre('')
 			setEmail('')
 			setPassword('')
@@ -62,6 +65,7 @@ const Registrar = () => {
 	}
 
 	const { msg } = alerta
+
 	return (
 		<>
 			{msg && <Alerta alerta={alerta} />}

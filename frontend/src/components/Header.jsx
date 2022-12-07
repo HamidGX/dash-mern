@@ -11,7 +11,7 @@ const Header = () => {
 	}
 
 	let Links = [
-		// { name: 'HOME', link: '/' },
+		{ name: 'ESTADISTICAS', link: '/' },
 		// { name: 'SERVICE', link: '/' },
 	]
 	let [open, setOpen] = useState(false)

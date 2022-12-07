@@ -47,7 +47,7 @@ export const emailOlvidePassword = async (datos) => {
 	const info = await transport.sendMail({
 		from: 'Dashboard <cuentas@bungie.net>',
 		to: email,
-		subject: 'Restablece tu contraseñ2a',
+		subject: 'Restablece tu contraseña',
 		text: 'Restablece tu contraseña',
 		html: `<p>Hola: ${nombre} has solicitado reestablecer tu contraseña</p>
              <p>Sigue el siguiente enlace para generar una nueva contraseña:</p>
